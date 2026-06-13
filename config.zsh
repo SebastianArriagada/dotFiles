@@ -7,7 +7,7 @@ declare commonPrograms=(
   ideaVim
   tig
   zsh
-  vscode
+  code
   btop
 )
 
@@ -17,7 +17,6 @@ declare macOsPrograms=(
 )
 
 declare linuxPrograms=(
-  bspwm
   dunst
   gnome
   picom

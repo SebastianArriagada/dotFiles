@@ -29,22 +29,22 @@ background = "0x1d2021"
 foreground = "0xd4be98"
 
 [font]
-size = 22
+size = 16
 
 [font.bold]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "Hack"
 
 # Keyboard bindings
 
@@ -774,6 +774,12 @@ mods = "Command|Shift"
 chars = "\u001B;"
 key = "Semicolon"
 mods = "Command"
+
+# Opacity toggle (Ctrl+Shift+O)
+[[keyboard.bindings]]
+command = { program = "/home/seba/.config/alacritty-toggle-opacity.sh", args = [] }
+key = "O"
+mods = "Control|Shift"
 
 [window]
 decorations = "none"

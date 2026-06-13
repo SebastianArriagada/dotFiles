@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 set -o errexit
 set -o pipefail
+set -o nounset
 
 zparseopts -D -E -F -- \
   s=skipSetup \
@@ -13,9 +14,10 @@ export isMacOs=`[[ "$(uname -s)" = "Darwin" ]] && printf 1`
 # Populate program list
 local allPrograms=("${commonPrograms[@]}")
 
-if (( isMacOs ))
-  then allPrograms+=("${macOsPrograms[@]}")
-  else allPrograms+=("${linuxPrograms[@]}")
+if (( isMacOs )); then
+  allPrograms+=("${macOsPrograms[@]}")
+else
+  allPrograms+=("${linuxPrograms[@]}")
 fi
 
 # Run link programs and run setup functions

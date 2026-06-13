@@ -4,3 +4,4 @@ export PATH=~/.zsh-spell-book/src/charms:${PATH}
 
 source ~/temp/.zshenv
 
+. "$HOME/.cargo/env"

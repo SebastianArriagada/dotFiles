@@ -212,13 +212,6 @@
     "command": "-workbench.action.files.save"
   },
   {
-    "key": "ctrl+s",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["workbench.action.files.save", "vscode-neovim.escape"]
-    }
-  },
-  {
     "key": "alt+u",
     "command": "cursorUndo",
     "when": "textInputFocus"
@@ -227,5 +220,32 @@
     "key": "ctrl+u",
     "command": "-cursorUndo",
     "when": "textInputFocus"
-  }
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "issue.createIssueFromFile",
+    "when": "!issues.creatingFromFile && resourceScheme == 'newIssue' && config.files.autoSave != 'off'"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "-issue.createIssueFromFile",
+    "when": "!issues.creatingFromFile && resourceScheme == 'newIssue' && config.files.autoSave != 'off'"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "s",
+    "command": "-workbench.action.files.save",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\u001b\r"
+    },
+    "when": "terminalFocus"
+}
 ]
